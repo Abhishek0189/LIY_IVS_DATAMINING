@@ -1,0 +1,48 @@
+=== Run information ===
+
+Scheme:       weka.associations.Apriori -N 10 -T 0 -C 0.9 -D 0.05 -U 1.0 -M 0.1 -S -1.0 -c -1
+Relation:     cleaned_salary_data-weka.filters.unsupervised.attribute.Discretize-B10-M-1.0-Rfirst-last-precision6
+Instances:    375
+Attributes:   9
+              Age
+              Gender
+              Education Level
+              Job Title
+              Years of Experience
+              Salary
+              Salary_Class
+              Experience_Level
+              Age_Group
+=== Associator model (full training set) ===
+
+
+Apriori
+=======
+
+Minimum support: 0.2 (75 instances)
+Minimum metric <confidence>: 0.9
+Number of cycles performed: 16
+
+Generated sets of large itemsets:
+
+Size of set of large itemsets L(1): 13
+
+Size of set of large itemsets L(2): 21
+
+Size of set of large itemsets L(3): 8
+
+Size of set of large itemsets L(4): 1
+
+Best rules found:
+
+ 1. Salary_Class=High 116 ==> Experience_Level=Senior 116    <conf:(1)> lift:(2.39) lev:(0.18) [67] conv:(67.43)
+ 2. Experience_Level=Mid 95 ==> Age_Group=Adult 95    <conf:(1)> lift:(1.56) lev:(0.09) [33] conv:(33.95)
+ 3. Salary='(25315-50280]' 85 ==> Salary_Class=Low 85    <conf:(1)> lift:(2.86) lev:(0.15) [55] conv:(55.31)
+ 4. Salary_Class=Medium Experience_Level=Mid 82 ==> Age_Group=Adult 82    <conf:(1)> lift:(1.56) lev:(0.08) [29] conv:(29.3)
+ 5. Education Level=Bachelors Salary='(25315-50280]' 81 ==> Salary_Class=Low 81    <conf:(1)> lift:(2.86) lev:(0.14) [52] conv:(52.7)
+ 6. Salary='(25315-50280]' Experience_Level=Junior 81 ==> Salary_Class=Low 81    <conf:(1)> lift:(2.86) lev:(0.14) [52] conv:(52.7)
+ 7. Education Level=Bachelors Salary='(25315-50280]' Experience_Level=Junior 77 ==> Salary_Class=Low 77    <conf:(1)> lift:(2.86) lev:(0.13) [50] conv:(50.1)
+ 8. Salary='(75245-100210]' 76 ==> Salary_Class=Medium 76    <conf:(1)> lift:(2.98) lev:(0.13) [50] conv:(50.46)
+ 9. Salary='(75245-100210]' 76 ==> Age_Group=Adult 76    <conf:(1)> lift:(1.56) lev:(0.07) [27] conv:(27.16)
+10. Salary='(75245-100210]' Age_Group=Adult 76 ==> Salary_Class=Medium 76    <conf:(1)> lift:(2.98) lev:(0.13) [50] conv:(50.46)
+
